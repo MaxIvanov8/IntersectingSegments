@@ -8,9 +8,8 @@ namespace test
         static void Main(string[] args)
         {
             var List = Input();
-            if(List==null)
+            if (List == null)
             {
-                Console.WriteLine("You entered wrong values");
                 return;
             }
             var sum = Func(List);
@@ -45,13 +44,24 @@ namespace test
 
         private static List<Coords> Input()
         {
+            Console.WriteLine("Enter count of segments: ");
             if (!(int.TryParse(Console.ReadLine(), out int n)))
             {
+                Console.WriteLine("You entered wrong value");
                 return null;
             }
             var L = new List<Coords>();
             for (var i = 0; i < n; ++i)
-                L.Add(new Coords(Console.ReadLine().Split()));
+            {
+                var temp = Console.ReadLine().Split();
+                var coord = new int[2];
+                if (!((int.TryParse(temp[0], out coord[0]) && (int.TryParse(temp[1], out coord[1])))) || (coord[0]>coord[1]))
+                {
+                    Console.WriteLine("You entered wrong value");
+                    return null;
+                }
+                L.Add(new Coords(coord));
+            }
             return L;
         }
     }

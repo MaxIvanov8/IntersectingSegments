@@ -3,8 +3,8 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <AssemblyName>test</AssemblyName>
-    <RootNamespace>test</RootNamespace>
+    <AssemblyName>IntersectingSegments</AssemblyName>
+    <RootNamespace>Segments</RootNamespace>
   </PropertyGroup>
 
 </Project>

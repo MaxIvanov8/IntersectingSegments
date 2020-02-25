@@ -7,10 +7,10 @@
 
         Coords() { }
 
-        public Coords(string[] t)
+        public Coords(int[] c)
         {
-            Left = int.Parse(t[0]);
-            Right = int.Parse(t[1]);
+            Left = c[0];
+            Right = c[1];
         }
     }
 }
